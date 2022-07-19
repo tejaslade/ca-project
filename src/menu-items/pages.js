@@ -1,43 +1,83 @@
 // assets
-import { IconKey } from '@tabler/icons';
+import { IconKey } from "@tabler/icons";
+import {
+  IconDashboard,
+  IconUsers,
+  IconReceipt,
+  IconFileInvoice,
+  IconCreditCard,
+  IconNotification,
+  IconLayoutCards
+} from "@tabler/icons";
 
 // constant
 const icons = {
-    IconKey
+  IconDashboard,
+  IconUsers,
+  IconReceipt,
+  IconFileInvoice,
+  IconCreditCard,
+  IconNotification,
+  IconLayoutCards
 };
 
 // ==============================|| EXTRA PAGES MENU ITEMS ||============================== //
 
 const pages = {
-    id: 'pages',
-    title: 'Pages',
-    caption: 'Pages Caption',
-    type: 'group',
-    children: [
-        {
-            id: 'authentication',
-            title: 'Authentication',
-            type: 'collapse',
-            icon: icons.IconKey,
+  id: "admin",
+  title: "Admin",
+  type: "group",
+  children: [
+    {
+      id: "Dashboard",
+      title: "Dashboard",
+      type: "item",
+      url: "/",
+      icon: icons.IconLayoutCards,
+      breadcrumbs: false,
+    },
+    {
+      id: "allusers",
+      title: "All User ",
+      type: "item",
+      url: "/admin/allusers",
+      icon: icons.IconUsers,
+      breadcrumbs: false,
+    },
+    {
+      id: "allbills",
+      title: "All Image Bills",
+      type: "item",
+      url: "/admin/allbills",
+      icon: icons.IconReceipt,
+      breadcrumbs: false,
+    },
+    {
+      id: "allfeedbills",
+      title: "All Feed Bills ",
+      type: "item",
+      url: "/admin/allfeedbills",
+      icon: icons.IconFileInvoice,
+      breadcrumbs: false,
+    },
+    {
+      id: "allcontacts",
+      title: "All Contact Forms",
+      type: "item",
+      url: "/admin/contacts",
+      icon: icons.IconCreditCard,
+      breadcrumbs: false,
+    },
 
-            children: [
-                {
-                    id: 'login3',
-                    title: 'Login',
-                    type: 'item',
-                    url: '/pages/login/login3',
-                    target: true
-                },
-                {
-                    id: 'register3',
-                    title: 'Register',
-                    type: 'item',
-                    url: '/pages/register/register3',
-                    target: true
-                }
-            ]
-        }
-    ]
+    {
+      id: "Notification",
+      title: "BroadCast Notification",
+      type: "item",
+      url: "/admin/notification",
+      icon: icons.IconNotification,
+      breadcrumbs: false,
+    },
+  ],
 };
 
 export default pages;
